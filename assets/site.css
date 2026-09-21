@@ -1,0 +1,289 @@
+/* ==========================================================================
+   5am9t1.com — Sam Dedewo
+   Reference system: Linear (near-black, one violet accent, restrained type).
+   No-AI-look: HOUSE. Allowed and used: A8 one gradient (hero scrim only),
+   A9 glass (nav over the photo wall), A12 hover (tile zoom, link colour).
+   Banned and absent: card frames, side stripes, tinted selections, accent
+   bars, tracked small caps, eyebrow labels, shadows and glow, text panels
+   on photos, highlight words, pill badges, rule-of-three copy.
+   ========================================================================== */
+
+@import url("/assets/fonts/fonts.css");
+
+:root {
+  /* colour: one job each. Contrast measured, see the build receipt. */
+  --bg: #0B0A10;          /* page ground, violet-tinted near-black */
+  --surface: #13111B;     /* one tone step up, for the proof band */
+  --ink: #EDEAFB;         /* headings and body */
+  --ink-2: #A29CC2;       /* secondary text */
+  --line: #2A2540;        /* hairline rules */
+  --accent: #8B7CF6;      /* the action colour: primary button, focus */
+  --on-accent: #0B0A10;   /* text on the accent */
+
+  /* type: one family; Unbounded only for display at 32px and above */
+  --font: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: "Unbounded", "Arial Black", Impact, sans-serif;
+
+  /* spacing scale: 8 12 16 20 24 32 44 56 80 120 */
+  --s1: 8px; --s2: 12px; --s3: 16px; --s4: 20px; --s5: 24px;
+  --s6: 32px; --s7: 44px; --s8: 56px; --s9: 80px; --s10: 120px;
+
+  --radius: 10px;
+  --wrap: 1200px;
+  --pad: 24px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (max-width: 640px) { :root { --pad: 16px; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 16px/1.6 var(--font);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 var(--pad); }
+
+.skip {
+  position: absolute; left: -9999px; top: var(--s3);
+  background: var(--ink); color: var(--bg); padding: var(--s2) var(--s3); border-radius: 6px;
+  z-index: 100; text-decoration: none; font-weight: 600;
+}
+.skip:focus { left: var(--s3); }
+
+/* --- links: A12, a 150ms colour change, no bar, no glow -------------------- */
+.link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 4px;
+  transition: color 150ms var(--ease), text-decoration-color 150ms var(--ease);
+}
+.link:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+/* --- buttons: one shape; primary by fill, secondary by outline ------------ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 0 var(--s5);
+  border-radius: var(--radius);
+  font: 600 16px/1 var(--font);
+  text-decoration: none;
+  transition: background-color 150ms var(--ease), color 150ms var(--ease), transform 150ms var(--ease);
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-primary:hover { background: #9D90FA; }
+.btn-secondary { color: var(--ink); outline: 1px solid rgba(237, 234, 251, .5); outline-offset: -1px; }
+.btn-secondary:hover { outline-color: var(--ink); }
+
+/* ==========================================================================
+   NAV — A9 glass. It sits over the photo wall, where a solid bar would cut
+   the top row of work off. Solid fallback where backdrop-filter is missing.
+   ========================================================================== */
+.nav {
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
+  background: rgba(11, 10, 16, .88);
+}
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .nav {
+    background: rgba(11, 10, 16, .58);
+    -webkit-backdrop-filter: blur(14px) saturate(1.2);
+    backdrop-filter: blur(14px) saturate(1.2);
+  }
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.brand { display: inline-flex; align-items: center; min-height: 44px; font: 700 18px/1 var(--font); letter-spacing: -.01em; text-decoration: none; }
+.nav-links { display: flex; align-items: center; gap: var(--s6); list-style: none; margin: 0; padding: 0; }
+.nav-links a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--ink-2); font-size: 15px; transition: color 150ms var(--ease); }
+.nav-links a {
+  background: linear-gradient(currentColor, currentColor) left calc(50% + 12px) / 0 1px no-repeat;
+  transition: color 150ms var(--ease), background-size 200ms var(--ease);
+}
+.nav-links a:hover, .nav-links a:focus-visible { color: var(--ink); background-size: 100% 1px; }
+.nav-links .nav-contact { color: var(--ink); }
+@media (max-width: 640px) { .nav-links .nav-hide { display: none; } }
+
+/* ==========================================================================
+   HERO — the wall of real work. A8: the one gradient on the page, a night
+   sky violet in the scrim, so the name reads over any photo behind it.
+   ========================================================================== */
+.hero {
+  position: relative;
+  min-height: min(92svh, 900px);
+  display: flex; align-items: flex-end;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--bg);
+}
+.wall {
+  position: absolute; inset: 0; z-index: -2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+}
+.tile { position: relative; overflow: hidden; display: block; }
+.tile img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 250ms var(--ease);
+}
+.tile:hover img { transform: scale(1.04); }
+.scrim {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(to top,
+    rgba(11, 10, 16, .97) 0%,
+    rgba(11, 10, 16, .86) 30%,
+    rgba(38, 22, 92, .42) 62%,
+    rgba(11, 10, 16, .50) 100%);
+}
+.hero-copy { padding-bottom: var(--s9); padding-top: 160px; }
+.hero h1 {
+  font: 800 clamp(48px, 7.5vw, 96px)/.98 var(--display);
+  letter-spacing: -.01em;
+  margin: 0 0 var(--s4);
+}
+.hero .role { font-size: clamp(17px, 1.6vw, 20px); font-weight: 500; color: var(--ink); margin: 0 0 var(--s3); max-width: 60ch; text-wrap: balance; }
+.hero .lead { font-size: 18px; color: var(--ink-2); margin: 0 0 var(--s6); max-width: 52ch; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: var(--s2); }
+
+@media (max-width: 800px) {
+  .wall { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr); }
+  .wall .tile:nth-child(n+7) { display: none; }
+}
+@media (max-width: 640px) { .hero .lead { font-size: 16px; } }
+
+/* ==========================================================================
+   MARQUEE — the page's one signature motion. Display capitals at 40px and
+   above, so the tracked-caps ban (under 32px) does not apply. Paused when
+   off screen, static under reduced motion.
+   ========================================================================== */
+.marquee { overflow: hidden; border-block: 1px solid var(--line); padding: var(--s5) 0; }
+.marquee-track { display: flex; width: max-content; animation: slide 48s linear infinite; }
+.marquee.paused .marquee-track { animation-play-state: paused; }
+.marquee span {
+  font: 700 clamp(40px, 6vw, 80px)/1 var(--display);
+  color: var(--ink-2);
+  white-space: nowrap;
+  padding-right: .6em;
+}
+@keyframes slide { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+
+/* ==========================================================================
+   SECTIONS
+   ========================================================================== */
+.section { padding: var(--s10) 0; }
+@media (max-width: 640px) { .section { padding: var(--s9) 0; } }
+.section h2 {
+  font: 600 clamp(34px, 4.2vw, 52px)/1.1 var(--font);
+  letter-spacing: -.015em;
+  margin: 0 0 var(--s8);
+  max-width: 20ch;
+}
+.section h3 { font: 600 24px/1.25 var(--font); letter-spacing: -.01em; margin: 0 0 var(--s2); }
+.muted { color: var(--ink-2); }
+
+/* --- intro + the one sourced stats row (LD1) ------------------------------ */
+.intro { font-size: clamp(20px, 2.2vw, 26px); line-height: 1.45; max-width: 34ch; margin: 0 0 var(--s9); font-weight: 500; }
+.proof {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s6);
+  margin: 0; padding: var(--s6) 0 0; border-top: 1px solid var(--line);
+}
+.proof div { margin: 0; }
+.proof dt { font: 700 clamp(36px, 4vw, 52px)/1 var(--display); margin: 0 0 var(--s2); }
+.proof dd { margin: 0; color: var(--ink-2); font-size: 15px; max-width: 22ch; }
+@media (max-width: 800px) { .proof { grid-template-columns: repeat(2, 1fr); row-gap: var(--s7); } }
+
+/* --- selected work: open rows, image and text, alternating. Not a card grid */
+.work { display: grid; gap: var(--s10); }
+.row { display: grid; grid-template-columns: 7fr 5fr; gap: var(--s8); align-items: center; }
+.row:nth-child(even) { grid-template-columns: 5fr 7fr; }
+.row:nth-child(even) .shot { order: 2; }
+.shot { display: block; overflow: hidden; border-radius: var(--radius); }
+.shot img { width: 100%; transition: transform 250ms var(--ease); }
+a.shot:hover img { transform: scale(1.03); }  /* links only: studio images go nowhere, so they do not move */
+.shot.portrait { max-width: 480px; justify-self: center; }
+.row p { margin: 0 0 var(--s3); color: var(--ink-2); max-width: 52ch; }
+.row .what { color: var(--ink); font-size: 18px; }
+.row .where { font-size: 15px; margin-top: var(--s5); }
+@media (max-width: 800px) {
+  .row, .row:nth-child(even) { grid-template-columns: 1fr; gap: var(--s5); }
+  .row:nth-child(even) .shot { order: 0; }
+  .work { gap: var(--s9); }
+}
+
+/* --- in the studio: a plain image row with captions below ----------------- */
+.section .studio-head { margin-top: var(--s10); }  /* beats `.section h3`, which zeroed this */
+.studio { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s5); margin-top: var(--s5); }
+.studio figure { margin: 0; }
+.studio .shot img { aspect-ratio: 4 / 5; object-fit: cover; }
+.studio figcaption { margin-top: var(--s2); font-size: 15px; color: var(--ink-2); }
+.studio figcaption strong { color: var(--ink); font-weight: 600; }
+@media (max-width: 640px) { .studio { grid-template-columns: 1fr 1fr; } .studio figure:last-child { grid-column: span 2; } }
+
+/* --- also built: two plain lists separated by hairline rules --------------- */
+.also { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s8); margin-top: var(--s10); }
+.plain { list-style: none; margin: 0; padding: 0; }
+.plain li { padding: var(--s2) 0; border-bottom: 1px solid var(--line); color: var(--ink-2); font-size: 15px; }
+.plain li strong { color: var(--ink); font-weight: 600; }
+@media (max-width: 800px) { .also { grid-template-columns: 1fr; gap: var(--s7); } }
+
+/* --- the machine ------------------------------------------------------------ */
+.machine-grid { display: grid; grid-template-columns: 5fr 7fr; gap: var(--s8); align-items: start; }
+.machine-grid p { color: var(--ink-2); margin: 0 0 var(--s3); max-width: 52ch; }
+.machine-grid p.what { color: var(--ink); font-size: 18px; }
+.diagram { margin: 0; }
+.diagram svg { width: 100%; height: auto; display: block; }
+.diagram .d-tall { display: none; max-width: 360px; }
+@media (max-width: 640px) { .diagram .d-wide { display: none; } .diagram .d-tall { display: block; } }
+.diagram figcaption { margin-top: var(--s2); font-size: 14px; color: var(--ink-2); }
+.bullets { margin: var(--s5) 0 0; padding-left: 1.1em; color: var(--ink-2); }
+.bullets li { margin-bottom: var(--s2); }
+@media (max-width: 900px) { .machine-grid { grid-template-columns: 1fr; } }
+
+/* --- music: an editorial list --------------------------------------------- */
+.music { display: grid; grid-template-columns: 5fr 7fr; gap: var(--s8); }
+.music .plain li { font-size: 16px; padding: var(--s3) 0; }
+@media (max-width: 800px) { .music { grid-template-columns: 1fr; gap: var(--s5); } }
+
+/* --- what I can build: open two-column text, no frames --------------------- */
+.offers { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--s8); row-gap: var(--s7); margin: 0; }
+.offers div { border-top: 1px solid var(--line); padding-top: var(--s5); }
+.offers dt { font: 600 20px/1.3 var(--font); margin: 0 0 var(--s1); }
+.offers dd { margin: 0; color: var(--ink-2); max-width: 46ch; }
+@media (max-width: 800px) { .offers { grid-template-columns: 1fr; } }
+
+/* --- contact ---------------------------------------------------------------- */
+.contact { border-top: 1px solid var(--line); }
+.contact h2 { max-width: 16ch; }
+.contact p { color: var(--ink-2); max-width: 46ch; margin: 0 0 var(--s6); font-size: 18px; }
+
+/* --- footer ----------------------------------------------------------------- */
+.footer { border-top: 1px solid var(--line); padding: var(--s6) 0 var(--s8); color: var(--ink-2); font-size: 14px; }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s3); }
+.footer a { color: var(--ink-2); }
+.footer a:hover { color: var(--ink); }
+
+/* ==========================================================================
+   DRESS (house pass, 2026-09-21)
+   D1 the particle network behind the Machine section (assets/network.js).
+   D2 the page's second and last gradient: a night-violet wash on the
+      contact band, the close and the one call to action.
+   ========================================================================== */
+.machine { position: relative; isolation: isolate; overflow: hidden; }
+.machine .network { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+
+.contact {
+  background: linear-gradient(180deg, #0B0A10 0%, #1B1340 52%, #0B0A10 100%);
+}

@@ -1,0 +1,23 @@
+# Sam Dedewo (5AM9T1)
+
+> Independent multidisciplinary creative director and AI systems architect. I design AI-powered production systems, and I lead the creative direction of what they produce.
+
+Over 20 years in music, art and design. I write and produce music, build and animate 3D characters, and design and build the websites, apps and games that put the work in front of people.
+
+## Selected work
+- Skinner & Vale: a British upcycled denim brand. Custom Shopify theme written from scratch, a 3D jacket customiser in Three.js, Klaviyo flows. Live with sales. https://skinnerandvale.com/
+- Barz: a London hip-hop life-sim game, designed, written and built from scratch. On the App Store since August 2026. https://5am9t1.github.io/barz/
+- The LuvBugz: a children's brand I created, modelled, scored and animated. 13 titles on Amazon Prime Video. https://theluvbugz.net/
+- George Ndah Academy: a football academy website, rebuilt off Squarespace. https://georgendahacademy.co.uk/
+- K!NG The Mogul: a masked 3D character. Paid partnerships for Nike and JD Sports (1M views), Under Armour and Flannels.
+
+## AI systems
+- MissionControl: my own AI operating system. Over 200 reusable skills, parallel agents, persistent memory, scheduled jobs and quality gates.
+- An automated video pipeline that has made over 250 videos for NeuroLoop100 and DailyPrayersFirst.
+
+## Music
+- "Stars", written with MNEK, Ren Washington and Mercedes Sikuma, licensed into Judd Apatow's film This Is 40 (Universal Pictures).
+- Songwriting with Wayne Hector, MNEK, Ali Tennant, Marvin Humes, Sabrina Washington, Michelle Gale and Jethro Sheeran.
+
+## Contact
+sam@5am9t1.com
