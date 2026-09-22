@@ -1,27 +1,35 @@
 # 5am9t1.com on Bluehost (Apache). GitHub Pages did these three things by itself.
+#
+# This file sits at the root of public_html, and Apache applies it to every folder below.
+# Addon domains live in subfolders of public_html (neuroloop100.com is in website_bd1be0c2/),
+# so EVERY rule here is scoped to the 5am9t1.com host. Unscoped, the redirect sent
+# http://neuroloop100.com to https://5am9t1.com (measured on a local Apache, 2026-09-22).
 
-# 1. Our own not-found page
-ErrorDocument 404 /404.html
+<If "%{HTTP_HOST} =~ /^(www\.)?5am9t1\.com$/i">
+  # 1. Our own not-found page
+  ErrorDocument 404 /404.html
 
-# 2. Always HTTPS, and one host name (5am9t1.com, no www)
+  # 3. Cache media and assets; always re-check pages
+  <IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType text/css "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+    ExpiresByType image/webp "access plus 30 days"
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/svg+xml "access plus 30 days"
+    ExpiresByType video/mp4 "access plus 30 days"
+  </IfModule>
+</If>
+
+# 2. Always HTTPS, and one host name (5am9t1.com, no www). Only for 5am9t1.com.
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^(www\.)?5am9t1\.com$ [NC]
   RewriteCond %{HTTPS} !=on [OR]
   RewriteCond %{HTTP_HOST} ^www\. [NC]
   RewriteRule ^ https://5am9t1.com%{REQUEST_URI} [L,R=301]
-</IfModule>
-
-# 3. Cache media and assets; always re-check pages
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType text/html "access plus 0 seconds"
-  ExpiresByType text/css "access plus 7 days"
-  ExpiresByType application/javascript "access plus 7 days"
-  ExpiresByType image/webp "access plus 30 days"
-  ExpiresByType image/jpeg "access plus 30 days"
-  ExpiresByType image/png "access plus 30 days"
-  ExpiresByType image/svg+xml "access plus 30 days"
-  ExpiresByType video/mp4 "access plus 30 days"
 </IfModule>
 
 # app-ads.txt, robots.txt, llms.txt and sitemap.xml are served as plain files from this folder.

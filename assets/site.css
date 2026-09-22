@@ -134,7 +134,7 @@ h1, h2, h3 { text-wrap: balance; }
   background: var(--bg);
 }
 .wall {
-  position: absolute; inset: 0; z-index: -2;
+  position: absolute; inset: var(--nav-h) 0 0 0; z-index: -2;   /* starts under the header, so the top row's heads are not behind it (round 18) */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -142,7 +142,7 @@ h1, h2, h3 { text-wrap: balance; }
 }
 .tile { position: relative; overflow: hidden; display: block; }
 .tile img {
-  width: 100%; height: 100%; object-fit: cover;
+  width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%;   /* crop from the bottom: heads stay in */
   transition: transform 250ms var(--ease);
 }
 .tile:hover img { transform: scale(1.04); }
@@ -531,24 +531,6 @@ a.shot:hover img { transform: scale(1.03); }  /* links only: studio images go no
 @media (max-width: 1000px) { .early { grid-template-columns: 1fr 1fr; row-gap: var(--s7); } }
 @media (max-width: 560px) { .early { grid-template-columns: 1fr; } }
 
-/* --- more live work: each site in a window that scrolls itself as the page
-   passes (D1). Two desktop sites and one phone, all the same height.
-   Without scroll timelines the window shows the top of each page. ---------- */
-.live { display: grid; grid-template-columns: 1fr 1fr 0.615fr; gap: var(--s5); align-items: start; margin-top: var(--s5); }
-.window { display: block; overflow: hidden; overflow: clip; border-radius: var(--radius); background: var(--surface); }
-.window img {
-  display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 0%;
-  transition: scale 250ms var(--ease);
-}
-.phone .window img { aspect-ratio: 9 / 19.5; }
-.window:hover img { scale: 1.02; }
-@media (max-width: 800px) {
-  .live { grid-template-columns: 1fr 1fr; row-gap: var(--s7); }
-  .live .site { grid-column: span 2; }
-  .live .site .window img { aspect-ratio: 4 / 5; }
-  .live .phone { grid-column: span 2; max-width: 240px; }
-}
-
 /* --- also built: two plain lists separated by hairline rules --------------- */
 .also { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s8); margin-top: var(--s10); }
 .plain { list-style: none; margin: 0; padding: 0; }
@@ -611,7 +593,7 @@ a.shot:hover img { transform: scale(1.03); }  /* links only: studio images go no
       animation-timeline: scroll(root);
       animation-range: 0 100vh;
     }
-    .wall .tile:nth-child(odd) img { animation-name: drift-up; }
+    .wall .tile:nth-child(odd) img { animation-name: drift-rise; }
     .hero-copy {
       animation: copy-lift linear both;
       animation-timeline: scroll(root);
@@ -623,17 +605,60 @@ a.shot:hover img { transform: scale(1.03); }  /* links only: studio images go no
       animation-timeline: view();
       animation-range: cover;
     }
-    .window img {
-      animation: site-scroll linear both;
-      animation-timeline: view();
-      animation-range: entry 40% exit 60%;
-    }
-    .phone .window img { animation: none; }
   }
 }
-@keyframes site-scroll { from { object-position: 50% 0%; } to { object-position: 50% 100%; } }
+
+/* D4 (round 17, 2026-09-22): D3 targeted the v2 layout, so from round 2 on
+   nothing below the hero moved. Home only (ids), so the case pages are unchanged.
+   - chapter and render images drift inside their clipped tiles (the frame
+     never shows an edge: scale 1.1 covers the 4% travel); the wide render
+     banner drifts twice as far
+   - on 2 columns the chapter text moves slower than its gallery (depth)
+   - logos float inside their tiles, odd and even in opposite directions,
+     echoing the hero wall; the 20% tile padding absorbs the travel, so the
+     seamless wall grid never moves
+   Uses scale/translate, so the tiles' hover zoom (transform) still adds on top. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    #work .g-tile img, #work .g-tile video,
+    #renders .g-tile img, #renders .g-tile video {
+      scale: 1.1;
+      animation: drift-frame-low linear both;
+      animation-timeline: view();
+      animation-range: cover;
+    }
+    #renders .r-contain .g-tile img { scale: 1.06; animation-name: drift-frame-soft; }
+    #renders .r-full .g-tile img, #renders .r-full .g-tile video { scale: 1.2; animation-name: drift-frame-far; }
+    #logos .logo img {
+      animation: float-up linear both;
+      animation-timeline: view();
+      animation-range: cover;
+    }
+    #logos .logo:nth-child(even) img { animation-name: float-down; }
+  }
+  @media (prefers-reduced-motion: no-preference) and (min-width: 900px) {
+    #work .chapter-copy {
+      animation: copy-slow linear both;
+      animation-timeline: view();
+      animation-range: cover;
+    }
+  }
+}
+/* Round 18 (Sam: "move down slightly so you can see the heads"): same lag direction, but each range
+   is shifted down. At scale 1.1 the top crop is now 6% on entry, 3% mid-screen, 0 on exit
+   (was 9%, 5%, 1%). The extra crop goes to the bottom of the picture instead. */
+@keyframes drift-frame-low { from { translate: 0 -1%; } to { translate: 0 5%; } }       /* scale 1.1: 5% margin */
+@keyframes drift-frame-soft { from { translate: 0 -0.5%; } to { translate: 0 3%; } }    /* scale 1.06: 3% margin */
+@keyframes drift-frame-far { from { translate: 0 -2%; } to { translate: 0 10%; } }      /* scale 1.2: 10% margin */
+@keyframes float-up { from { translate: 0 6%; } to { translate: 0 -6%; } }
+@keyframes float-down { from { translate: 0 -6%; } to { translate: 0 6%; } }
+@keyframes copy-slow { from { translate: 0 -40px; } to { translate: 0 40px; } }   /* lags the page = reads as further away */
 @keyframes drift-down { to { translate: 0 7%; } }
 @keyframes drift-up { to { translate: 0 -5%; } }
+/* Round 18: the wall is scaled 1.14 about its centre, so 7% is the most it can move before an edge
+   shows. Odd tiles now START at +7% (image top at the tile top) and rise to 0, so no tile ever
+   crops more than 7% off the top; even tiles still drift down, so the columns still move apart. */
+@keyframes drift-rise { from { translate: 0 7%; } to { translate: 0 0%; } }
 @keyframes copy-lift { to { translate: 0 -56px; } }
 @keyframes drift-frame { from { translate: 0 -4%; } to { translate: 0 4%; } }
 
@@ -647,8 +672,6 @@ a.shot:hover img { transform: scale(1.03); }  /* links only: studio images go no
 /* --- Skinner & Vale: the customiser and the jacket at one height ---------- */
 .sv-pair { grid-template-columns: 1.268fr 0.75fr; align-items: stretch; }
 .sv-pair img { width: 100%; height: 100%; object-fit: cover; }
-.phone .window video { display: block; width: 100%; aspect-ratio: 9 / 19.5; object-fit: cover; }
-.window { position: relative; }
 
 /* ==========================================================================
    LOGO WALL — one mosaic, 2px seams like the hero wall. Tiles reflow with
