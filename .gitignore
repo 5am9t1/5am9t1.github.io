@@ -1,1 +1,4 @@
 .DS_Store
+
+# Netlify CLI link (local only)
+.netlify/

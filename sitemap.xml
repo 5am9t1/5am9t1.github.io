@@ -1,4 +1,376 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://5am9t1.com/</loc><lastmod>2026-09-21</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://5am9t1.com/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <image:image><image:loc>https://5am9t1.com/assets/img/barz-chicken-shop-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/ktm-dj-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/luvbugz-hug-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/sv-eagle-jacket-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/chris-gem-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/kandi-carpet-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/ascend-night-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/barz-dex-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/luvbugz-spaceship-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/barz-estate-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/kandi-portrait-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/gna-site-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/luvbugz-hug-1600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/luvbugz-yt-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/chris-gem-1200.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/sv-eagle-900.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/barz-split-900.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/nl100-home-540.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/nl100-sleep-540.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/nl100-v8-bg-540.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/ape-multimedia.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/barz.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/neuroloop-100.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/discipline.png</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/king-the-mogul.png</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/the-luvbugz.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/opulent-influencers.png</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/cocoa-to-thrill.png</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/ishtar.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/flying-dragon.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/fitness-by-wade.png</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/hitroom.png</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/iris-gold.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/my-closet-treasures.png</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/sew-me.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/ipackage.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/blocpusher-audio.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/skinner-and-vale.png</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/harriet-heart.png</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/colour-my-thought.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/so-squad.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/tianna.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/step-n-style.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/logos/clearfluence.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/renders/tianna.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/renders/ipackage-hair-pin.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/renders/step-n-style.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/renders/ipackage-granola.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/renders/queen-bubblegum.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/renders/prima-flow.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/renders/best-of-the-best.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/renders/so-much-money.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/renders/queen-globe.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/renders/treasure-box.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/renders/painted-by-me.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/media/site-gna-poster.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/media/site-hof-poster.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/media/site-nl100-poster.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/img/luvbugz-yt-960.jpg</video:thumbnail_loc>
+      <video:title>5 Little Monkeys Bed with The LuvBugz, 366,000 views</video:title>
+      <video:description>The most watched LuvBugz video, with 366,000 views on YouTube. Song, characters and animation by Sam Dedewo.</video:description>
+      <video:player_loc>https://www.youtube-nocookie.com/embed/95kkbQ9k9Z0</video:player_loc>
+      <video:duration>259</video:duration>
+      <video:publication_date>2019-04-03</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/luvbugz-pilot-poster.jpg</video:thumbnail_loc>
+      <video:title>The LuvBugz in 3D, the new series in production</video:title>
+      <video:description>The LuvBugz in 3D: a pilot from the new series Sam Dedewo is making.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/luvbugz-pilot.mp4</video:content_loc>
+      <video:duration>8</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/ktm-jd-poster.jpg</video:thumbnail_loc>
+      <video:title>Nike Air Max, for JD Sports</video:title>
+      <video:description>The Nike Air Max and JD Sports partnership: K!₦G The Mogul spins an Air Max as Nike and JD balls drop around him.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/ktm-jd.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:publication_date>2026-09-21</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/ktm-heatwave-pool-poster.jpg</video:thumbnail_loc>
+      <video:title>HEATWAVE, K!₦G The Mogul x Washington Heights</video:title>
+      <video:description>HEATWAVE, the music video by K!₦G The Mogul and Washington Heights. Music and animation by Sam Dedewo.</video:description>
+      <video:player_loc>https://www.youtube-nocookie.com/embed/ciSN3tahMcw</video:player_loc>
+      <video:duration>186</video:duration>
+      <video:publication_date>2022-09-27</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/ktm-dj-poster.jpg</video:thumbnail_loc>
+      <video:title>K!₦G The Mogul on the decks</video:title>
+      <video:description>K!₦G The Mogul, the masked 3D character created by Sam Dedewo, on the decks at a beach party.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/ktm-dj.mp4</video:content_loc>
+      <video:duration>5</video:duration>
+      <video:publication_date>2026-09-21</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/chris-reel-v2-poster.jpg</video:thumbnail_loc>
+      <video:title>The Chris Allen pendant, from the first block-out to the finished piece</video:title>
+      <video:description>The Chris Allen Jewellery pendant, from the first block-out in Blender to the finished piece in precious stones.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/chris-reel-v2.mp4</video:content_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/chris-ring-poster.jpg</video:thumbnail_loc>
+      <video:title>The finished pendant, turning in the light</video:title>
+      <video:description>The finished pendant, a serpent coiled around a geodesic sphere, modelled in Blender by Sam Dedewo.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/chris-ring.mp4</video:content_loc>
+      <video:duration>8</video:duration>
+      <video:publication_date>2026-09-21</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/sv-badges-poster.jpg</video:thumbnail_loc>
+      <video:title>The Skinner and Vale 3D customiser: badges placed on the jacket, then a turn</video:title>
+      <video:description>The Skinner &amp; Vale 3D customiser built by Sam Dedewo: badges picked and placed on the jacket, then a full turn.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/sv-badges.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/sv-phoenix-poster.jpg</video:thumbnail_loc>
+      <video:title>The Phoenix gilet, an ad film for Skinner and Vale</video:title>
+      <video:description>The Phoenix gilet, an ad film for Skinner &amp; Vale.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/sv-phoenix.mp4</video:content_loc>
+      <video:duration>5</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/barz-clip1-poster.jpg</video:thumbnail_loc>
+      <video:title>Barz: council estate to number 1 in the charts</video:title>
+      <video:description>A promo for Barz, the London hip-hop life-sim game by Sam Dedewo: from a council estate to number 1 in the charts.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/barz-clip1.mp4</video:content_loc>
+      <video:duration>13</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/barz-clip3-poster.jpg</video:thumbnail_loc>
+      <video:title>Barz: one decision ended his career</video:title>
+      <video:description>A promo for Barz, the London hip-hop life-sim game by Sam Dedewo: one decision ended his career.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/barz-clip3.mp4</video:content_loc>
+      <video:duration>13</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/nl100-app-poster.jpg</video:thumbnail_loc>
+      <video:title>NeuroLoop 100 in use: an affirmation, the journal, box breathing and sleep mode</video:title>
+      <video:description>NeuroLoop 100, the iOS app by Sam Dedewo, in use: a daily affirmation, the journal, box breathing and sleep mode.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/nl100-app.mp4</video:content_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/renders/abel-karate-poster.jpg</video:thumbnail_loc>
+      <video:title>Abel Karate: a chrome samurai warrior, modelled and animated</video:title>
+      <video:description>Abel Karate: a chrome samurai warrior, modelled and animated in 3D by Sam Dedewo.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/renders/abel-karate.mp4</video:content_loc>
+      <video:duration>11</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/site-gna-poster.jpg</video:thumbnail_loc>
+      <video:title>georgendahacademy.co.uk, from the top of the page to the bottom</video:title>
+      <video:description>georgendahacademy.co.uk, a website by Sam Dedewo, scrolled from top to bottom.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/site-gna.mp4</video:content_loc>
+      <video:duration>17</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/site-hof-poster.jpg</video:thumbnail_loc>
+      <video:title>House of Fabulous, from the top of the page to the bottom</video:title>
+      <video:description>House of Fabulous, a website by Sam Dedewo, scrolled from top to bottom.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/site-hof.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/site-nl100-poster.jpg</video:thumbnail_loc>
+      <video:title>neuroloop100.com, from the top of the page to the bottom</video:title>
+      <video:description>neuroloop100.com, a website by Sam Dedewo, scrolled from top to bottom.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/site-nl100.mp4</video:content_loc>
+      <video:duration>14</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/nl100-v8-poster.jpg</video:thumbnail_loc>
+      <video:title>It does not take 21 days to form a habit: a NeuroLoop 100 episode</video:title>
+      <video:description>A NeuroLoop 100 episode made by the production system Sam Dedewo built: idea, script, AI images, video, captions, quality check, published.</video:description>
+      <video:player_loc>https://www.youtube-nocookie.com/embed/hjhBad4yG84</video:player_loc>
+      <video:duration>63</video:duration>
+      <video:publication_date>2026-03-27</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://5am9t1.com/about/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <image:image><image:loc>https://5am9t1.com/assets/img/ascend-night-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/kandi-awards-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/rezex-cover-600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/ape-logo-600.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://5am9t1.com/work/barz/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <image:image><image:loc>https://5am9t1.com/assets/img/barz-split-900.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/barz-chicken-shop.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/barz-dex.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/barz-estate.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/luvbugz-hug-1200.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/barz-clip1-poster.jpg</video:thumbnail_loc>
+      <video:title>Barz: council estate to number 1 in the charts</video:title>
+      <video:description>A promo for Barz, the London hip-hop life-sim game by Sam Dedewo: from a council estate to number 1 in the charts.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/barz-clip1.mp4</video:content_loc>
+      <video:duration>13</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/barz-clip3-poster.jpg</video:thumbnail_loc>
+      <video:title>Barz: one decision ended his career</video:title>
+      <video:description>A promo for Barz, the London hip-hop life-sim game by Sam Dedewo: one decision ended his career.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/barz-clip3.mp4</video:content_loc>
+      <video:duration>13</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/barz-clip2-poster.jpg</video:thumbnail_loc>
+      <video:title>Barz: every choice changes your story</video:title>
+      <video:description>A promo for Barz, the London hip-hop life-sim game by Sam Dedewo: every choice changes your story.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/barz-clip2.mp4</video:content_loc>
+      <video:duration>13</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://5am9t1.com/work/chris-allen-pendant/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <image:image><image:loc>https://5am9t1.com/assets/img/chris-10-front.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/chris-01-blockout.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/chris-02-blockout-gold.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/chris-03-gem-reveal.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/chris-11-two-five.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/chris-16-closeup.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/sv-eagle-jacket-1200.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/chris-reel-v2-poster.jpg</video:thumbnail_loc>
+      <video:title>The Chris Allen pendant, from the first block-out to the finished piece</video:title>
+      <video:description>The Chris Allen Jewellery pendant, from the first block-out in Blender to the finished piece in precious stones.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/chris-reel-v2.mp4</video:content_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/chris-ring-poster.jpg</video:thumbnail_loc>
+      <video:title>The finished pendant, turning in the light</video:title>
+      <video:description>The finished pendant, a serpent coiled around a geodesic sphere, modelled in Blender by Sam Dedewo.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/chris-ring.mp4</video:content_loc>
+      <video:duration>8</video:duration>
+      <video:publication_date>2026-09-21</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/chris-detail-poster.jpg</video:thumbnail_loc>
+      <video:title>The real pendant, close up</video:title>
+      <video:description>The real Chris Allen Jewellery pendant, close up.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/chris-detail.mp4</video:content_loc>
+      <video:duration>10</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://5am9t1.com/work/king-the-mogul/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <image:image><image:loc>https://5am9t1.com/assets/img/ktm-heatwave-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/ktm-kwya-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/chris-10-front.webp</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/img/ktm-heatwave-960.jpg</video:thumbnail_loc>
+      <video:title>HEATWAVE, K!₦G The Mogul x Washington Heights</video:title>
+      <video:description>HEATWAVE, the music video by K!₦G The Mogul and Washington Heights. Music and animation by Sam Dedewo.</video:description>
+      <video:player_loc>https://www.youtube-nocookie.com/embed/ciSN3tahMcw</video:player_loc>
+      <video:duration>186</video:duration>
+      <video:publication_date>2022-09-27</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/img/ktm-kwya-960.jpg</video:thumbnail_loc>
+      <video:title>Know Who You Are, K!₦G The Mogul x Elle Cato</video:title>
+      <video:description>Know Who You Are, by K!₦G The Mogul and Elle Cato. Music and animation by Sam Dedewo.</video:description>
+      <video:player_loc>https://www.youtube-nocookie.com/embed/uW--G0L_Ik0</video:player_loc>
+      <video:duration>192</video:duration>
+      <video:publication_date>2024-04-09</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/ktm-dj-poster.jpg</video:thumbnail_loc>
+      <video:title>K!₦G The Mogul on the decks at a beach party</video:title>
+      <video:description>K!₦G The Mogul, the masked 3D character created by Sam Dedewo, on the decks at a beach party.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/ktm-dj.mp4</video:content_loc>
+      <video:duration>5</video:duration>
+      <video:publication_date>2026-09-21</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/ktm-jd-poster.jpg</video:thumbnail_loc>
+      <video:title>K!₦G The Mogul in Nike Air Max, from the JD Sports campaign</video:title>
+      <video:description>The Nike Air Max and JD Sports partnership: K!₦G The Mogul spins an Air Max as Nike and JD balls drop around him.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/ktm-jd.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:publication_date>2026-09-21</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://5am9t1.com/work/skinner-and-vale/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <image:image><image:loc>https://5am9t1.com/assets/img/sv-eagle-900.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/sv-customiser-1040.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/sv-eagle-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/barz-split-900.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/sv-badges-poster.jpg</video:thumbnail_loc>
+      <video:title>The 3D customiser: badges placed on the jacket, then a turn</video:title>
+      <video:description>The Skinner &amp; Vale 3D customiser built by Sam Dedewo: badges picked and placed on the jacket, then a full turn.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/sv-badges.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/sv-phoenix-poster.jpg</video:thumbnail_loc>
+      <video:title>The Phoenix gilet, an ad film for Skinner and Vale</video:title>
+      <video:description>The Phoenix gilet, an ad film for Skinner &amp; Vale.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/sv-phoenix.mp4</video:content_loc>
+      <video:duration>5</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/sv-turn-poster.jpg</video:thumbnail_loc>
+      <video:title>The jacket turning in the 3D customiser</video:title>
+      <video:description>A Skinner &amp; Vale jacket turning in the 3D customiser built by Sam Dedewo.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/sv-turn.mp4</video:content_loc>
+      <video:duration>11</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://5am9t1.com/work/the-luvbugz/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <image:image><image:loc>https://5am9t1.com/assets/img/luvbugz-hug-1600.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/luvbugz-yt-960.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/luvbugz-dance.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/luvbugz-rainbow-eggs.webp</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/luvbugz-spaceship-1200.jpg</image:loc></image:image>
+    <image:image><image:loc>https://5am9t1.com/assets/img/ktm-dj-1200.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/img/luvbugz-yt-960.jpg</video:thumbnail_loc>
+      <video:title>5 Little Monkeys Bed with The LuvBugz, 366,000 views</video:title>
+      <video:description>The most watched LuvBugz video, with 366,000 views on YouTube. Song, characters and animation by Sam Dedewo.</video:description>
+      <video:player_loc>https://www.youtube-nocookie.com/embed/95kkbQ9k9Z0</video:player_loc>
+      <video:duration>259</video:duration>
+      <video:publication_date>2019-04-03</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://5am9t1.com/assets/media/luvbugz-pilot-poster.jpg</video:thumbnail_loc>
+      <video:title>The LuvBugz in 3D, the new series in production</video:title>
+      <video:description>The LuvBugz in 3D: a pilot from the new series Sam Dedewo is making.</video:description>
+      <video:content_loc>https://5am9t1.com/assets/media/luvbugz-pilot.mp4</video:content_loc>
+      <video:duration>8</video:duration>
+      <video:publication_date>2026-09-22</video:publication_date>
+    </video:video>
+  </url>
 </urlset>

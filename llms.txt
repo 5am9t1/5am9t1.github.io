@@ -1,23 +1,40 @@
 # Sam Dedewo (5AM9T1)
 
-> Independent multidisciplinary creative director and AI systems architect. I design AI-powered production systems, and I lead the creative direction of what they produce.
+> Sam Dedewo (Wilfred Samson Dedewo) is an independent multidisciplinary creative director and AI systems architect. He designs AI-powered production systems, and leads the creative direction of what they produce. His studio is 5AM9T1.
 
-Over 20 years in music, art and design. I write and produce music, build and animate 3D characters, and design and build the websites, apps and games that put the work in front of people.
+Over 20 years in music, art and design. He writes and produces music, builds and animates 3D characters, and designs and builds the websites, apps and games that put the work in front of people.
+
+## Key facts
+- The LuvBugz, his children's animation brand: 798,602 YouTube views across 33 videos (September 2026), 366,000 of them on "5 Little Monkeys Bed", and 13 animated titles on Amazon Prime Video.
+- K!₦G The Mogul, his masked 3D character: paid partnerships for Nike and JD Sports, Under Armour and Flannels. The #KingOfTheGame video for JD Sports passed 1 million views.
+- "Stars", co-written with MNEK, Ren Washington and Mercedes Sikuma, was licensed into Judd Apatow's film This Is 40 (Universal Pictures).
+- Barz, his London hip-hop life-sim game, has been on the App Store since August 2026.
 
 ## Selected work
-- Skinner & Vale: a British upcycled denim brand. Custom Shopify theme written from scratch, a 3D jacket customiser in Three.js, Klaviyo flows. Live with sales. https://skinnerandvale.com/
-- Barz: a London hip-hop life-sim game, designed, written and built from scratch. On the App Store since August 2026. https://5am9t1.github.io/barz/
-- The LuvBugz: a children's brand I created, modelled, scored and animated. 13 titles on Amazon Prime Video. https://theluvbugz.net/
+- K!₦G The Mogul: a masked 3D character he designed, built in 3D and made music for, released through SoundOn. Case: https://5am9t1.com/work/king-the-mogul/ · https://www.tiktok.com/@kingthemogul · https://www.youtube.com/@kingthemogul
+- The LuvBugz: a children's brand he created, modelled and animated; he also wrote and produced all of its music. A book on Amazon, and a website in 18 languages across 740 pages. Case: https://5am9t1.com/work/the-luvbugz/ · https://theluvbugz.net/ · https://www.youtube.com/@TheLuvBugz
+- Chris Allen Jewellery: a one-off pendant, a serpent coiled around a geodesic sphere. He modelled it in Blender from block-out to beauty render; the finished piece is set with rubies, diamonds and sapphires. Case: https://5am9t1.com/work/chris-allen-pendant/
+- Barz: designed, written and built from scratch. 3 seasons, 9 endings, an original fight engine, and automated tests over all 13,824 story paths. Case: https://5am9t1.com/work/barz/ · https://apps.apple.com/us/app/barz-uk-rap-life-sim/id6785560902
+- Skinner & Vale: a British upcycled denim brand. A Shopify theme written from scratch, a 3D jacket customiser in Three.js, Klaviyo flows. Live with sales. Case: https://5am9t1.com/work/skinner-and-vale/ · https://skinnerandvale.com/
+- NeuroLoop 100: a brain-science app on the App Store, fed by a daily Shorts channel his AI pipeline produces. https://apps.apple.com/gb/app/neuroloop-100/id6748347800
 - George Ndah Academy: a football academy website, rebuilt off Squarespace. https://georgendahacademy.co.uk/
-- K!NG The Mogul: a masked 3D character. Paid partnerships for Nike and JD Sports (1M views), Under Armour and Flannels.
+- House of Fabulous: a private styling house website. https://house-of-fabulous.netlify.app/
+- In development: The LuvBugz in 3D, Barz 3D in Unreal Engine 5, Ascend (a Godot arcade climber), Kandi Girl (an AI R&B artist).
+- Also: IQTest (a free IQ test with no paywall), PhotoVault (iPhone photo backup for Mac), Ledger (local-first accounting for Mac), Spoke (local voice to text for Mac, https://github.com/5am9t1/spoke).
+- Earlier work: the score for the film Reasonable Excuse Goes to Hollywood (directed by Samona Williams); brand and website for Painted By Me, a children's clothing label stocked in Bentalls; APE Multimedia, his first studio; The DEKT Project (2021), where SlashedAce chose him as one of 54 artists to make a playing card sold as a 1/1 NFT on Foundation. His card was the 10 of Spades.
 
 ## AI systems
-- MissionControl: my own AI operating system. Over 200 reusable skills, parallel agents, persistent memory, scheduled jobs and quality gates.
-- An automated video pipeline that has made over 250 videos for NeuroLoop100 and DailyPrayersFirst.
+- MissionControl: his own AI operating system. Over 200 reusable skills, parallel agents, persistent memory, scheduled jobs and quality gates.
+- An automated video pipeline that has made over 250 videos for NeuroLoop 100 and DailyPrayersFirst, with no manual step per video.
+- Claude connected to Shopify, TradingView, DaVinci Resolve, Ableton and Blender through MCP servers.
 
 ## Music
-- "Stars", written with MNEK, Ren Washington and Mercedes Sikuma, licensed into Judd Apatow's film This Is 40 (Universal Pictures).
 - Songwriting with Wayne Hector, MNEK, Ali Tennant, Marvin Humes, Sabrina Washington, Michelle Gale and Jethro Sheeran.
+- Production for A-Star Records and Swim Society, and the original songs for The LuvBugz.
+
+## More
+- About me: the system behind the work, music credits, services and earlier work. https://5am9t1.com/about/
 
 ## Contact
-sam@5am9t1.com
+sam@5am9t1.com · https://5am9t1.com/
+LinkedIn https://www.linkedin.com/in/sam-dedewo-a7940516 · Instagram https://www.instagram.com/5am9t1 · X https://x.com/5am9t1 · GitHub https://github.com/5am9t1
