@@ -1,9 +1,9 @@
 # 5am9t1.com on Bluehost (Apache). GitHub Pages did these three things by itself.
 #
-# This file sits at the root of public_html, and Apache applies it to every folder below.
-# Addon domains live in subfolders of public_html (neuroloop100.com is in website_bd1be0c2/),
-# so EVERY rule here is scoped to the 5am9t1.com host. Unscoped, the redirect sent
-# http://neuroloop100.com to https://5am9t1.com (measured on a local Apache, 2026-09-22).
+# The document root is public_html/5am9t1 (measured 2026-09-23), so this file no longer
+# governs neuroloop100.com. The rules stay scoped to the 5am9t1.com host anyway: if the
+# file is ever copied to public_html/, unscoped rules would send http://neuroloop100.com
+# to https://5am9t1.com (measured on a local Apache, 2026-09-22).
 
 <If "%{HTTP_HOST} =~ /^(www\.)?5am9t1\.com$/i">
   # 1. Our own not-found page

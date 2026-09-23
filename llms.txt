@@ -20,7 +20,7 @@ Over 20 years in music, art and design. He writes and produces music, builds and
 - George Ndah Academy: a football academy website, rebuilt off Squarespace. https://georgendahacademy.co.uk/
 - House of Fabulous: a private styling house website. https://house-of-fabulous.netlify.app/
 - In development: The LuvBugz in 3D, Barz 3D in Unreal Engine 5, Ascend (a Godot arcade climber), Kandi Girl (an AI R&B artist).
-- Also: IQTest (a free IQ test with no paywall), PhotoVault (iPhone photo backup for Mac), Ledger (local-first accounting for Mac), Spoke (local voice to text for Mac, https://github.com/5am9t1/spoke).
+- Also: IQTest (a free IQ test with no paywall), PhotoVault (iPhone photo backup for Mac), Ledger (local-first accounting for Mac), Spoke (local voice to text for Mac).
 - Earlier work: the score for the film Reasonable Excuse Goes to Hollywood (directed by Samona Williams); brand and website for Painted By Me, a children's clothing label stocked in Bentalls; APE Multimedia, his first studio; The DEKT Project (2021), where SlashedAce chose him as one of 54 artists to make a playing card sold as a 1/1 NFT on Foundation. His card was the 10 of Spades.
 
 ## AI systems
@@ -29,7 +29,7 @@ Over 20 years in music, art and design. He writes and produces music, builds and
 - Claude connected to Shopify, TradingView, DaVinci Resolve, Ableton and Blender through MCP servers.
 
 ## Music
-- Songwriting with Wayne Hector, MNEK, Ali Tennant, Marvin Humes, Sabrina Washington, Michelle Gayle and Jethro Sheeran.
+- Songwriting with Wayne Hector (Westlife, One Direction, Nicki Minaj), MNEK, Ali Tennant (vocal coach on The X Factor and The Voice UK, writer for All Saints and JLS), Marvin Humes (JLS), Sabrina Washington (Mis-Teeq), Michelle Gayle and Jethro Sheeran.
 - Production for A-Star Records and Swim Society, and the original songs for The LuvBugz.
 
 ## More

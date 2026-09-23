@@ -53,14 +53,33 @@
 
     button.disabled = true;
     say('Sending…');
-    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
-      .then(function (r) {
-        return r.json().catch(function () { return {}; }).then(function (d) {
-          if (!r.ok || !d.ok) throw new Error(d.message || '');
-          form.reset();
-          if (quote) showQuote();
-          say(d.message || 'Thank you. Your message is in my inbox.', 'ok');
+
+    /* Bluehost's bot check answers a visitor's first request to a .php file with
+       409 and a one-line script that sets a cookie and reloads. A background send
+       cannot reload, so the message was lost (measured 2026-09-23). Set the cookie
+       that reply names and send once more. */
+    function send(retry) {
+      return fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' }, credentials: 'same-origin' })
+        .then(function (r) {
+          return r.text().then(function (t) {
+            var challenge = /document\.cookie\s*=\s*"(humans_\d+=\w+)"/.exec(t);
+            if (r.status === 409 && challenge && retry) {
+              document.cookie = challenge[1] + '; path=/; SameSite=Lax';
+              return send(false);
+            }
+            var d = {};
+            try { d = JSON.parse(t); } catch (e) {}
+            return { r: r, d: d };
+          });
         });
+    }
+
+    send(true)
+      .then(function (res) {
+        if (!res.r.ok || !res.d.ok) throw new Error(res.d.message || '');
+        form.reset();
+        if (quote) showQuote();
+        say(res.d.message || 'Thank you. Your message is in my inbox.', 'ok');
       })
       .catch(function (err) {
         say(err.message || 'That did not send. Please try again, or email sam@5am9t1.com.', 'error');

@@ -40,7 +40,7 @@
 @media (max-width: 640px) { :root { --pad: 16px; } }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }   /* a #section jump stops below the sticky header */
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
@@ -118,7 +118,7 @@ h1, h2, h3 { text-wrap: balance; }
   transition: color 150ms var(--ease), background-size 200ms var(--ease);
 }
 .nav-links a:hover, .nav-links a:focus-visible { color: var(--ink); background-size: 100% 1px; }
-.nav-links .nav-contact { color: var(--ink); }
+.nav-links .nav-contact, .nav-links .nav-build { color: var(--ink); }   /* the two links every visitor needs, shown at every width */
 @media (max-width: 899px) { .nav-links .nav-hide { display: none; } }
 
 /* ==========================================================================
@@ -871,7 +871,11 @@ a.shot:hover img { transform: scale(1.03); }  /* links only: studio images go no
 }
 .social-icon:hover, .social-icon:focus-visible { color: var(--ink); }
 .nav-links { gap: var(--s5); }
-@media (max-width: 640px) { .nav-links { gap: var(--s1); } }
+@media (max-width: 640px) {
+  .nav-links { gap: var(--s1); }
+  /* Phones: "What I can build" and "Contact" need the room. The same three links are in every footer. */
+  .nav-links .nav-social { display: none; }
+}
 .footer .socials { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s1); margin: 0; }
 .footer .footer-link { margin-left: var(--s2); }
 
@@ -879,7 +883,6 @@ a.shot:hover img { transform: scale(1.03); }  /* links only: studio images go no
    tools list, song credits. Same plain-list language as "Also built". ---- */
 .design-more { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s8); margin-top: var(--s8); }
 @media (max-width: 800px) { .design-more { grid-template-columns: 1fr; gap: 0; } }
-.music .plain li.credits { font-size: 15px; color: var(--ink-2); }
 .tools-head { margin: var(--s9) 0 var(--s5); font: 600 24px/1.25 var(--font); }
 .tools { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--s8); row-gap: var(--s5); margin: 0; }
 .tools div { border-top: 1px solid var(--line); padding-top: var(--s3); }
