@@ -28,6 +28,68 @@
 })();
 
 /* ==========================================================================
+   Menu button for phones and tablets (Sam, 2026-09-23: "no hamburger menu").
+   Below 900 px the header hides every link except "What I can build" and
+   "Contact". This adds a button that opens ALL of them, plus the social
+   icons, built from the header's own links, so there is one list to edit.
+   Closes on a link tap, Escape, a tap outside, or a resize to desktop.
+   ========================================================================== */
+(function () {
+  function init() {
+    var nav = document.querySelector('.nav'), inner = nav && nav.querySelector('.nav-inner');
+    if (!inner || inner.querySelector('.nav-toggle')) return;
+
+    var menu = document.createElement('div');
+    menu.className = 'nav-menu';
+    menu.id = 'nav-menu';
+    menu.hidden = true;
+    var list = document.createElement('ul');
+    var socials = document.createElement('div');
+    socials.className = 'nav-menu-social';
+    nav.querySelectorAll('.nav-links a').forEach(function (a) {
+      var copy = a.cloneNode(true);
+      copy.removeAttribute('class');
+      if (a.classList.contains('social-icon')) { copy.className = 'social-icon'; socials.appendChild(copy); return; }
+      var li = document.createElement('li');
+      li.appendChild(copy);
+      list.appendChild(li);
+    });
+    menu.appendChild(list);
+    menu.appendChild(socials);
+    document.body.appendChild(menu);
+
+    var ICON_OPEN = '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+    var ICON_CLOSE = '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'nav-toggle';
+    btn.setAttribute('aria-controls', 'nav-menu');
+
+    function set(open) {
+      menu.hidden = !open;
+      btn.setAttribute('aria-expanded', String(open));
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      btn.innerHTML = open ? ICON_CLOSE : ICON_OPEN;
+      document.documentElement.classList.toggle('nav-open', open);
+    }
+    set(false);
+    inner.appendChild(btn);
+
+    btn.addEventListener('click', function () { set(menu.hidden); });
+    menu.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !menu.hidden) { set(false); btn.focus(); }
+    });
+    document.addEventListener('click', function (e) {
+      if (!menu.hidden && !menu.contains(e.target) && !btn.contains(e.target)) set(false);
+    });
+    window.matchMedia('(min-width: 900px)').addEventListener('change', function (m) { if (m.matches) set(false); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+
+/* ==========================================================================
    No black tiles on the way down (Sam, 2026-09-23).
    Images below the first screen are loading="lazy", so the first screen
    paints fast. But lazy images only start loading as they near the screen,

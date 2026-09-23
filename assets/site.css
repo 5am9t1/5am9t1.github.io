@@ -892,6 +892,36 @@ a.shot:hover img { transform: scale(1.03); }  /* links only: studio images go no
 
 .nav .social-icon svg { width: 15px; height: 15px; }   /* smaller glyphs in the header; the tap area stays 44 px tall */
 
+/* --- menu button + panel, below 900 px (built by top.js, 2026-09-23) ------- */
+.nav-toggle { display: none; }
+@media (max-width: 899px) {
+  .nav-toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; margin: 0 -10px 0 var(--s1); padding: 0;
+    background: none; border: 0; color: var(--ink); cursor: pointer;
+  }
+}
+.nav-menu {
+  position: fixed; inset: var(--nav-h) 0 auto 0; z-index: 49;
+  max-height: calc(100svh - var(--nav-h)); overflow-y: auto; overscroll-behavior: contain;
+  background: rgba(11, 10, 16, .97);
+  padding: var(--s2) var(--pad) var(--s6);
+}
+.nav-menu[hidden] { display: none; }
+.nav-menu ul { list-style: none; margin: 0 auto; padding: 0; max-width: var(--wrap); }
+.nav-menu li a {
+  display: flex; align-items: center; min-height: 52px;
+  font: 600 22px/1.2 var(--font); color: var(--ink); text-decoration: none;
+  transition: color 150ms var(--ease);
+}
+.nav-menu li a:hover, .nav-menu li a:focus-visible { color: var(--accent); }
+.nav-menu-social { display: flex; gap: var(--s1); max-width: var(--wrap); margin: var(--s4) auto 0; margin-left: -10px; }
+.nav-menu .social-icon svg { width: 20px; height: 20px; }
+/* The narrowest phones (320 px): "Contact" moves into the menu, or the row runs into the logo. */
+@media (max-width: 359px) { .nav-links li:has(> .nav-contact) { display: none; } }
+html.nav-open { overflow: hidden; }   /* the page behind does not scroll while the menu is open */
+@media (min-width: 900px) { .nav-menu { display: none !important; } }
+
 /* --- 3D renders: a mixed-size grid, captions under each tile (no text on
    the render), every tile opens full size. ------------------------------- */
 .render-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s5) var(--s3); }
