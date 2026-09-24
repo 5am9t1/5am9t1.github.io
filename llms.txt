@@ -18,7 +18,7 @@ Over 20 years in music, art and design. He writes and produces music, builds and
 - Skinner & Vale: a British upcycled denim brand. A Shopify theme written from scratch, a 3D jacket customiser in Three.js, Klaviyo flows. Live with sales. Case: https://5am9t1.com/work/skinner-and-vale/ · https://skinnerandvale.com/
 - NeuroLoop 100: a brain-science app on the App Store, fed by a daily Shorts channel his AI pipeline produces. https://apps.apple.com/gb/app/neuroloop-100/id6748347800
 - George Ndah Academy: a football academy website, rebuilt off Squarespace. https://georgendahacademy.co.uk/
-- House of Fabulous: a private styling house website. https://house-of-fabulous.netlify.app/
+- House of Fabulous: a private styling house website. https://thehouseoffabulous.com/
 - In development: The LuvBugz in 3D, Barz 3D in Unreal Engine 5, Ascend (a Godot arcade climber), Kandi Girl (an AI R&B artist).
 - Also: IQTest (a free IQ test with no paywall), PhotoVault (iPhone photo backup for Mac), Ledger (local-first accounting for Mac), Spoke (local voice to text for Mac).
 - Earlier work: the score for the film Reasonable Excuse Goes to Hollywood (directed by Samona Williams); brand and website for Painted By Me, a children's clothing label stocked in Bentalls; APE Multimedia, his first studio; The DEKT Project (2021), where SlashedAce chose him as one of 54 artists to make a playing card sold as a 1/1 NFT on Foundation. His card was the 10 of Spades.
