@@ -141,6 +141,7 @@ h1, h2, h3 { text-wrap: balance; }
   gap: 2px;
 }
 .tile { position: relative; overflow: hidden; display: block; }
+.tile picture { display: contents; }   /* tiles 7-12: <picture> with a desktop-only source; the img still fills the tile (round 20) */
 .tile img {
   width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%;   /* crop from the bottom: heads stay in */
   transition: transform 250ms var(--ease);

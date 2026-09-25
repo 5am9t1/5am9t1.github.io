@@ -98,10 +98,32 @@
    eager, top of the page first, so the whole set (5.8 MB on home) is in
    before anyone reaches it.
    ========================================================================== */
+/* Round 20 (Sam, 2026-09-25: "it shows black first"). Waiting for 'load' meant waiting for EVERY
+   poster and font too: measured 5.9 s on a cold visit, so the logo wall was still empty 2.7 s after
+   scrolling to it. Now the rest starts as soon as the first screen's pictures (the hero wall, or any
+   fetchpriority="high" image) are in; 'load' stays as the fallback. A page with no first-screen
+   pictures keeps the old behaviour, so it never competes with its own first paint. */
 (function () {
+  var started = false;
   function loadAll() {
+    if (started) return;
+    started = true;
     document.querySelectorAll('img[loading="lazy"]').forEach(function (img) { img.loading = 'eager'; });
   }
+  function whenFirstScreenIn() {
+    var first = Array.prototype.slice.call(document.querySelectorAll('.wall img, img[fetchpriority="high"]'));
+    if (!first.length) return;
+    var left = first.length;
+    function one() { if (--left === 0) loadAll(); }
+    first.forEach(function (img) {
+      if (img.complete) one();
+      else { img.addEventListener('load', one, { once: true }); img.addEventListener('error', one, { once: true }); }
+    });
+  }
   if (document.readyState === 'complete') loadAll();
-  else window.addEventListener('load', loadAll);
+  else {
+    window.addEventListener('load', loadAll);
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', whenFirstScreenIn);
+    else whenFirstScreenIn();
+  }
 })();
