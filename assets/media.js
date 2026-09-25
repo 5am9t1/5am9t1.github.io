@@ -14,6 +14,18 @@
   /* --- clips ---------------------------------------------------------------- */
   var clips = Array.prototype.slice.call(document.querySelectorAll('video[muted]'));
 
+  /* Round 21 (Sam, 2026-09-25, Safari private window: the K!NG clips showed only the blurred
+     previews). A clip that is "playing" but has no frame yet paints nothing, and Safari drops
+     the poster at that moment. So the sharp poster is also the clip's own background, on top of
+     the blurred preview: whatever the video is doing, the still frame shows until it really plays. */
+  Array.prototype.forEach.call(document.querySelectorAll('video[poster]'), function (v) {
+    var under = v.style.backgroundImage;
+    v.style.backgroundImage = 'url("' + v.getAttribute('poster') + '")' + (under ? ', ' + under : '');
+    v.style.backgroundSize = 'cover';
+    v.style.backgroundPosition = 'center';
+    v.style.backgroundRepeat = 'no-repeat';
+  });
+
   clips.forEach(function (v) {
     var box = v.parentElement;
     var btn = document.createElement('button');

@@ -13,7 +13,15 @@
   function dropHash() {
     if (location.hash) history.replaceState(history.state, '', location.pathname + location.search);
   }
+  /* Round 21: 'load' waits for every picture and the first clips, which on a slow line is 8 s or
+     more (measured 2026-09-25 at 5 Mbit/s). A visitor who has already scrolled to a chapter must
+     not be thrown back to the top, so the jump below only runs if they have not touched the page. */
+  var touched = false;
+  ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(function (t) {
+    window.addEventListener(t, function () { touched = true; }, { passive: true, once: true, capture: true });
+  });
   window.addEventListener('load', function () {
+    if (touched) { setTimeout(dropHash, 0); return; }
     /* Jump to the #section ourselves. Left to the browser, the jump is a smooth
        scroll that can still be running (or never start, in a background tab)
        when the hash is dropped below, and the visitor stays at the top.
@@ -108,7 +116,9 @@
   function loadAll() {
     if (started) return;
     started = true;
-    document.querySelectorAll('img[loading="lazy"]').forEach(function (img) { img.loading = 'eager'; });
+    /* low priority (round 21): these ~40 logos and renders must not queue ahead of the chapter
+       posters and clips a visitor is looking at. Measured 09-25 at 5 Mbit/s: K!NG posters 5.2 s. */
+    document.querySelectorAll('img[loading="lazy"]').forEach(function (img) { img.fetchPriority = 'low'; img.loading = 'eager'; });
   }
   function whenFirstScreenIn() {
     var first = Array.prototype.slice.call(document.querySelectorAll('.wall img, img[fetchpriority="high"]'));
