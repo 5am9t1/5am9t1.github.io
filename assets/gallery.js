@@ -47,6 +47,12 @@
       node.autoplay = true;
       node.playsInline = true;
       node.setAttribute('aria-label', btn.dataset.title || 'Video');
+      /* Round 23: the full-size clip needs ~2.5 s to buffer before it plays (measured live
+         2026-09-26, Chris reel, fast line), and the player was an empty frame until then. Show the
+         tile's still instead: it is already on screen, so it paints at once. */
+      var still = btn.closest('.g-tile');
+      still = still && still.querySelector('video[poster]');
+      if (still) node.poster = still.getAttribute('poster');
     }
     body.replaceChildren(node);
     title.textContent = btn.dataset.title || '';

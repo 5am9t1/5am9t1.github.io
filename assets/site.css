@@ -29,6 +29,9 @@
   /* spacing scale: 8 12 16 20 24 32 44 56 80 120 */
   --s1: 8px; --s2: 12px; --s3: 16px; --s4: 20px; --s5: 24px;
   --s6: 32px; --s7: 44px; --s8: 56px; --s9: 80px; --s10: 120px;
+  /* space above and below each chapter and section (round 23): 80 px up to 889 px tall screens,
+     then 9% of the screen height, up to 120 px. Two blocks meet, so the gap is twice this. */
+  --s-block: clamp(var(--s9), 9svh, var(--s10));
 
   --radius: 10px;
   --wrap: 1200px;
@@ -338,11 +341,17 @@ h1, h2, h3 { text-wrap: balance; }
 }
 
 /* ==========================================================================
-   CHAPTERS — one full screen per case. Each piece keeps its own aspect
+   CHAPTERS — one case each. Each piece keeps its own aspect
    ratio (portrait clips are never cropped to landscape). No entrance
    animation: the content is already there (M1).
+   Round 23 (Sam, 2026-09-26: "reduce the height of the gaps"): no longer one
+   full screen each. min-height: 100svh centred the content in a screen-tall
+   box, so the empty space grew with the screen: 548 px between LuvBugz and
+   K!NG on a 1728x1117 MacBook, 871 px at 2560x1440, and uneven per chapter.
+   Now the gap is the padding only: 160 px on screens up to 889 px tall,
+   rising with the screen to 240 px at 1333 px tall and above.
    ========================================================================== */
-.chapter { min-height: 100svh; display: grid; align-items: center; padding-block: var(--s9); }
+.chapter { display: grid; align-items: center; padding-block: var(--s-block); }
 .chapter-inner { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--s8); align-items: center; }
 .chapter.flip .chapter-inner { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
 .chapter.flip .chapter-media { order: 2; }
@@ -424,7 +433,9 @@ h1, h2, h3 { text-wrap: balance; }
 /* ==========================================================================
    SECTIONS
    ========================================================================== */
-.section { padding: var(--s10) 0; }
+/* Round 23 (Sam, 2026-09-26, the gap above "3D renders": "and here please"): was a fixed 120 px,
+   so 240 px between any two sections. Now the same rhythm as the chapters (--s-block). */
+.section { padding: var(--s-block) 0; }
 @media (max-width: 640px) { .section { padding: var(--s9) 0; } }
 .section h2 {
   font: 600 clamp(34px, 4.2vw, 52px)/1.1 var(--font);
@@ -630,6 +641,11 @@ a.shot:hover img { transform: scale(1.03); }  /* links only: studio images go no
     }
     #renders .r-contain .g-tile img { scale: 1.06; animation-name: drift-frame-soft; }
     #renders .r-full .g-tile img, #renders .r-full .g-tile video { scale: 1.2; animation-name: drift-frame-far; }
+    /* Round 24b/24c: NeuroLoop 100 and Barz are a whole iPhone standing on the tile colour, with room around it.
+       The 1.1 zoom + 5% drift would crop the phone's foot at the end of the scroll, and a device
+       sliding inside its frame reads as a mistake; it stands still, like a product shot. */
+    #nl100 .g-tile img, #nl100 .g-tile video,
+    #barz .g-tile img, #barz .g-tile video { scale: none; animation: none; }
     #logos .logo img {
       animation: float-up linear both;
       animation-timeline: view();
