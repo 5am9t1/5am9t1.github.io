@@ -16,12 +16,13 @@ Over 20 years in music, art and design. He writes and produces music, builds and
 - Chris Allen Jewellery: a one-off pendant, a serpent coiled around a geodesic sphere. He modelled it in Blender from block-out to beauty render; the finished piece is set with rubies, diamonds and sapphires. Case: https://5am9t1.com/work/chris-allen-pendant/
 - Barz: designed, written and built from scratch. 3 seasons, 9 endings, an original fight engine, and automated tests over all 13,824 story paths. Case: https://5am9t1.com/work/barz/ · https://apps.apple.com/us/app/barz-uk-rap-life-sim/id6785560902
 - Skinner & Vale: a British upcycled denim brand. A Shopify theme written from scratch, a 3D jacket customiser in Three.js, Klaviyo flows. Live with sales. Case: https://5am9t1.com/work/skinner-and-vale/ · https://skinnerandvale.com/
+- Harriet Heart: an original character he has been building since 2001, a pop star and producer in Vellacity, a city where everything hovers. He did the character design, the story world, the art direction, the logo and the website. Her debut single, Just a little love, is out soon. Case: https://5am9t1.com/work/harriet-heart/ · https://harrietheart.com/
 - NeuroLoop 100: a brain-science app on the App Store, fed by a daily Shorts channel his AI pipeline produces. https://apps.apple.com/gb/app/neuroloop-100/id6748347800
 - George Ndah Academy: a football academy website, rebuilt off Squarespace. https://georgendahacademy.co.uk/
 - House of Fabulous: a private styling house website. https://thehouseoffabulous.com/
 - In development: The LuvBugz in 3D, Barz 3D in Unreal Engine 5, Ascend (a Godot arcade climber), Kandi Girl (an AI R&B artist).
 - Also: IQTest (a free IQ test with no paywall), PhotoVault (iPhone photo backup for Mac), Ledger (local-first accounting for Mac), Spoke (local voice to text for Mac).
-- Earlier work: the score for the film Reasonable Excuse Goes to Hollywood (directed by Samona Williams); brand and website for Painted By Me, a children's clothing label stocked in Bentalls; APE Multimedia, his first studio; The DEKT Project (2021), where SlashedAce chose him as one of 54 artists to make a playing card sold as a 1/1 NFT on Foundation. His card was the 10 of Spades.
+- Earlier work: the score for the film Reasonable Excuse (directed by Samona Williams); brand and website for Painted By Me, a children's clothing label stocked in Bentalls; APE Multimedia, his first studio; The DEKT Project (2021), where SlashedAce chose him as one of 54 artists to make a playing card sold as a 1/1 NFT on Foundation. His card was the 10 of Spades.
 
 ## AI systems
 - MissionControl: his own AI operating system. Over 200 reusable skills, parallel agents, persistent memory, scheduled jobs and quality gates.

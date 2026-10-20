@@ -1,0 +1,85 @@
+/* ==========================================================================
+   5am9t1.com dress, 2026-10-20. house_style_pass, No-AI-look: FREE (Sam: "run the magic UI").
+   Vanilla ports from house_style_pass/references/dress-pieces.md, re-skinned to the site.css tokens.
+   Watch-list IDs used: A12 hover (button arrow, focus cards, play cursor), A8 shading (video text band).
+   Every moving piece is off under prefers-reduced-motion; pointer pieces only on a fine pointer that hovers.
+   ========================================================================== */
+
+/* D8 Noise texture (Magic UI), as a static 160 px tile (Harriet Heart's Grain), never animated.
+   The full-size viewer is a <dialog> in the top layer, so the grain never covers a picture being viewed. */
+.grain {
+  position: fixed; inset: 0; z-index: 60; pointer-events: none;
+  background: url("/assets/img/grain.png") repeat; opacity: .05;
+}
+
+/* D1 BlurText (ReactBits): the hero name lands letter by letter, once per visit (head script sets .seen-intro) */
+.bt .bw { display: inline-block; white-space: nowrap; }
+.bt .ch { display: inline-block; }
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.seen-intro) .bt .ch { animation: bt-in 640ms var(--ease) both; animation-delay: calc(var(--i) * 38ms); }
+}
+@keyframes bt-in {
+  from { opacity: 0; filter: blur(12px); transform: translateY(.16em); }
+  to { opacity: 1; filter: none; transform: none; }
+}
+
+/* D2 Number Ticker (Magic UI): proof numbers count up when they scroll into view. dress.js keeps the real
+   number in the page for screen readers and Google; the counting copy is aria-hidden and holds its width. */
+.tick { display: inline-block; font-variant-numeric: tabular-nums; text-align: left; }
+
+/* D3 Interactive Hover Button (Magic UI): an arrow slides into the button on hover and on keyboard focus */
+.btn .arr {
+  display: inline-block; width: 0; opacity: 0; overflow: hidden; transform: translateX(-6px);
+  transition: width 200ms var(--ease), opacity 200ms var(--ease), transform 200ms var(--ease), margin 200ms var(--ease);
+}
+.btn:hover .arr, .btn:focus-visible .arr { width: 1em; opacity: 1; transform: none; margin-left: .45em; }
+@media (prefers-reduced-motion: reduce) { .btn .arr { transition: none; } }
+
+/* D4 Focus Cards (Aceternity): pointing at one logo softens the others (:has, so the gaps do not count) */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .logo-wall:has(.logo:hover) .logo:not(:hover) img { filter: blur(3px) grayscale(1); opacity: .4; }
+  .logo-wall:has(.logo:hover) .logo:not(:hover) .logo-name { opacity: .45; }
+  .logo-name { transition: opacity 250ms var(--ease); }
+}
+
+/* D5 Lens (Magic UI / Aceternity): a 190 px magnifier over the 3D renders, reading the full-size file */
+.has-lens .g-open { cursor: zoom-in; }
+.lens {
+  position: absolute; left: 0; top: 0; z-index: 3; width: 190px; height: 190px; border-radius: 50%;
+  pointer-events: none; opacity: 0; background-repeat: no-repeat; background-color: var(--surface);
+  box-shadow: 0 0 0 1px rgba(237, 234, 251, .7);
+  transition: opacity 200ms var(--ease);
+}
+.lens-on .lens { opacity: 1; }
+
+/* D6 Following pointer (Aceternity): a Play / View circle follows the pointer over the case clips */
+.view-cursor { position: fixed; left: 0; top: 0; z-index: 55; width: 84px; height: 84px; pointer-events: none; }
+.view-cursor .vc {
+  width: 100%; height: 100%; border-radius: 50%; background: var(--accent); color: var(--on-accent);
+  display: flex; align-items: center; justify-content: center; font: 600 14px/1 var(--font);
+  transform: scale(.2); opacity: 0; transition: transform 200ms var(--ease), opacity 200ms var(--ease);
+}
+.view-cursor.on .vc { transform: none; opacity: 1; }
+.has-view-cursor .chapter-media .g-open { cursor: none; }
+
+/* D7 Video Text (Magic UI): a giant 5AM9T1 with a real render playing inside the letters.
+   Outside the letters `darken` keeps the page ground; inside the white letters it shows the film. */
+.vtext { position: relative; isolation: isolate; overflow: hidden; background: #000; border-top: 1px solid var(--line); }
+.vtext video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.vtext-mask {
+  position: relative; margin: 0; padding: var(--s8) 0; text-align: center;
+  background: var(--bg); color: #fff; mix-blend-mode: darken;
+  /* the word is 5.125 em wide in Unbounded 800: fit it to the page's content width (max 1200 px) */
+  font: 800 min(calc((100vw - 2 * var(--pad)) / 5.2), 230px)/.9 var(--display); letter-spacing: -.02em; white-space: nowrap;
+}
+/* media.js adds the pause button (a looping video needs one): bottom right, in the band's empty margin */
+.vtext .clip-toggle { z-index: 2; top: auto; bottom: 6px; right: var(--pad); }
+
+/* Harriet Heart case page: the crew row */
+.crew-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s5); margin: var(--s7) 0 0; padding: 0; list-style: none; }
+@media (max-width: 800px) { .crew-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s4); } }
+.crew-grid li { margin: 0; }
+.crew-grid .crew-art { display: flex; align-items: flex-end; justify-content: center; aspect-ratio: 4 / 5; padding: var(--s4) var(--s4) 0; border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+.crew-grid .crew-art img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+.crew-grid .crew-name { margin: var(--s2) 0 0; font-weight: 600; color: var(--ink); }
+.crew-grid .crew-line { margin: 2px 0 0; font-size: 14px; color: var(--ink-2); }
