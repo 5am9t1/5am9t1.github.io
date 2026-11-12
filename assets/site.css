@@ -411,6 +411,15 @@ h1, h2, h3 { text-wrap: balance; }
 .lb-body video { display: block; max-width: min(92vw, 1100px); max-height: 80svh; border-radius: var(--radius); background: #000; }
 .lb-body iframe { display: block; width: min(92vw, 1100px); aspect-ratio: 16 / 9; max-height: 80svh; border: 0; border-radius: var(--radius); }
 .lb-title { margin: 0; font-size: 15px; color: var(--ink-2); text-align: center; max-width: 60ch; }
+/* a website film: the live site's address as a button under the film (2026-11-12). The film gives up the
+   button's height, so the button stays on screen on a short (landscape phone) screen too. */
+.lb-has-visit .lb-body video { max-height: calc(80svh - 72px); }
+.lb-visit { margin-top: var(--s1); gap: .5em; }
+.lb-visit[hidden], .lb-note[hidden] { display: none; }
+.lb-ext { font-size: 1.05em; line-height: 1; }
+.lb-note { margin: 0; padding: 0 var(--s3); min-height: 48px; display: inline-flex; align-items: center;
+  border-radius: var(--radius); outline: 1px solid rgba(237, 234, 251, .3); outline-offset: -1px;
+  font: 600 15px/1 var(--font); color: var(--ink-2); }
 .lb-close {
   position: fixed; top: var(--s3); right: var(--s3);
   width: 44px; height: 44px; border: 0; border-radius: 50%;

@@ -5,7 +5,7 @@
 Over 20 years in music, art and design. He writes and produces music, builds and animates 3D characters, and designs and builds the websites, apps and games that put the work in front of people.
 
 ## Key facts
-- The LuvBugz, his children's animation brand: 798,602 YouTube views across 33 videos (September 2026), 366,000 of them on "5 Little Monkeys Bed", and 13 animated titles on Amazon Prime Video.
+- The LuvBugz, his children's animation brand: 831,776 YouTube views across 39 videos (November 2026), 372,000 of them on "5 Little Monkeys Bed", and 13 animated titles on Amazon Prime Video.
 - K!₦G The Mogul, his masked 3D character: paid partnerships for Nike and JD Sports, Under Armour and Flannels. The #KingOfTheGame video for JD Sports passed 1 million views.
 - "Stars", co-written with MNEK, Ren Washington and Mercedes Seecoomar (Iris Gold), was licensed into Judd Apatow's film This Is 40 (Universal Pictures).
 - Barz, his London hip-hop life-sim game, has been on the App Store since August 2026.
@@ -26,7 +26,7 @@ Over 20 years in music, art and design. He writes and produces music, builds and
 
 ## AI systems
 - MissionControl: his own AI operating system. Over 200 reusable skills, parallel agents, persistent memory, scheduled jobs and quality gates.
-- An automated video pipeline that has made over 250 videos for NeuroLoop 100 and DailyPrayersFirst, with no manual step per video.
+- An automated video pipeline that has made over 260 videos for NeuroLoop 100 and DailyPrayersFirst, with no manual step per video.
 - Claude connected to Shopify, TradingView, DaVinci Resolve, Ableton and Blender through MCP servers.
 
 ## Music
